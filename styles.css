@@ -3,11 +3,16 @@ body {
     box-sizing: border-box;
 }
 
+#tableHeader {
+    font-weight: bold;
+}
+
 .tableRow {
     margin: 5px 0;
 }
 
 .dataElement {
+    display: inline-block;
     float: left;
     margin: 5px;
     padding: 5px;
