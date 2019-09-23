@@ -4,7 +4,7 @@
  *
  * @return PDO Returns a PDO database connection object
  */
-function connectDB() {
+function connectDB() :PDO {
     $db = new PDO('mysql:host=db; dbname=joshCollection', 'root', 'password');
     $db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
     return $db;
@@ -22,4 +22,5 @@ function getCollection(PDO $db) {
     $collection = $query->fetchAll();
     return $collection;
 }
+
 
