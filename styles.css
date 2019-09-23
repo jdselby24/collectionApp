@@ -3,22 +3,31 @@ body {
     box-sizing: border-box;
 }
 
-
 .tableRow {
     overflow: auto;
-    border: 1px solid black;
     width: 100%;
+    border: 1px solid black;
 }
 
 .dataElement {
-    font-size: 9px;
+    font-size: 15px;
     float: left;
-    width: 60px;
+    width: 100px;
     margin-left: 5px;
+    padding: 2px;
+    overflow: auto;
 }
 
 .tableHeader {
     font-weight: bold;
+    border-right: 2px solid black;
+    overflow: auto;
+}
+
+.car {
+    border: 2px solid black;
+    margin-bottom: 5px;
+    width: 400px;
 }
 
 

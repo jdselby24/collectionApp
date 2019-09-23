@@ -24,7 +24,7 @@ function getCollection(PDO $db) {
 }
 
 /**
- * This function generates the HTML to display the collection visually and generates a table header
+ * This function generates the HTML to display the collection visually and generates headers
  *
  * @param array $collection The array of collection data as returned by getCollection function
  * @return string Returns the HTML to display the collection data in rows and columns
@@ -32,33 +32,36 @@ function getCollection(PDO $db) {
 function displayCollection(array $collection) {
     $htmlOut = "";
     $htmlOut .= "<h1> Josh's Car Collection</h1>";
-    $htmlOut .= "<div class=\"tableRow\" id=\"tableHeader\">
-    <div class=\"dataElement\">Type</div>
-    <div class=\"dataElement\">Manufacturer</div>
-    <div class=\"dataElement\">Model</div>
-    <div class=\"dataElement\">Year</div>
-    <div class=\"dataElement\">Registration</div>
-    <div class=\"dataElement\">Colour</div>
-    <div class=\"dataElement\">Fuel Type</div>
-    <div class=\"dataElement\">Engine Layout</div>
-    <div class=\"dataElement\">Engine Displacement (cc)</div>
-    <div class=\"dataElement\">Drivetrain</div>
-    <div class=\"dataElement\">0 to 60 time (seconds)</div>
-    <div class=\"dataElement\">Power (HP)</div>
-    <div class=\"dataElement\">Torque (NM)</div>
-    <div class=\"dataElement\">Number of Doors</div>
-</div>";
+
+    $rowNames = ["type" => "Type:",
+        "manufacturer" => "Manufacturer:",
+        "model" => "Model:",
+        "year" => "Year:",
+        "regNo" => "Registration:",
+        "color" => "Colour:",
+        "fuel" => "Fuel:",
+        "engineLayout" => "Engine Layout:",
+        "engineDisplacement" => "Engine Displacement (cc):",
+        "driveTrain" => "Drivetrain:",
+        "accel" => "0 to 60 time (seconds):",
+        "power" => "Power (HP):",
+        "torque" => "Torque (NM):",
+        "numberOfDoors" => "Number of Doors:"];
 
     foreach ($collection as $car) {
-        $htmlOut .= "<div class=\"tableRow\">";
-        foreach ($car as $attribute) {
-            $htmlOut .= "<div class=\"dataElement\">$attribute</div>";
+        $htmlOut .= "<div class=\"car\">";
+        foreach ($car as $key => $attribute) {
+            $htmlOut .= "<div class=\"tableRow\">";
+            $htmlOut .= "<div class=\"dataElement tableHeader\">$rowNames[$key]</div>";
+            $htmlOut .= "<div class=\"dataElement\">". $car[$key] ."</div>";
+            $htmlOut .= "</div>";
         }
         $htmlOut .= "</div>";
     }
 
     return $htmlOut;
 }
+
 
 
 
