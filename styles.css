@@ -1,0 +1,14 @@
+body {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.tableRow {
+    margin: 5px 0;
+}
+
+.dataElement {
+    float: left;
+    margin: 5px;
+    padding: 5px;
+}
