@@ -23,3 +23,36 @@ function getCollection(PDO $db) {
     return $collection;
 }
 
+function displayCollection(array $collection) {
+    $htmlOut = "";
+    $htmlOut .= "<h1> Josh's Car Collection</h1>";
+    $htmlOut .= "<div class=\"tableRow\" id=\"tableHeader\">
+    <div class=\"dataElement\">Type</div>
+    <div class=\"dataElement\">Manufacturer</div>
+    <div class=\"dataElement\">Model</div>
+    <div class=\"dataElement\">Year</div>
+    <div class=\"dataElement\">Registration</div>
+    <div class=\"dataElement\">Colour</div>
+    <div class=\"dataElement\">Fuel Type</div>
+    <div class=\"dataElement\">Engine Layout</div>
+    <div class=\"dataElement\">Engine Displacement (cc)</div>
+    <div class=\"dataElement\">Drivetrain</div>
+    <div class=\"dataElement\">0 to 60 time (seconds)</div>
+    <div class=\"dataElement\">Power (HP)</div>
+    <div class=\"dataElement\">Torque (NM)</div>
+    <div class=\"dataElement\">Number of Doors</div>
+</div><br>";
+
+    foreach ($collection as $car) {
+        $htmlOut .= "<div class=\"tableRow\">";
+        foreach ($car as $attribute) {
+            $htmlOut .= "<div class=\"dataElement\">$attribute</div>";
+        }
+        $htmlOut .= "</div><br>";
+    }
+
+    return $htmlOut;
+}
+
+
+

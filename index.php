@@ -4,6 +4,9 @@ require_once('functions.php');
 $db = connectDB();
 $collection = getCollection($db);
 
+$htmlCollection = displayCollection($collection);
+echo $htmlCollection;
+
 ?>
 
 <!DOCTYPE html>
@@ -16,7 +19,7 @@ $collection = getCollection($db);
 </head>
 
 <body>
-<h1> Josh's Car Collection</h1>
+
 </body>
 
 </html>
