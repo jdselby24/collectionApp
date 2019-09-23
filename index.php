@@ -10,7 +10,7 @@ echo $htmlCollection;
 ?>
 
 <!DOCTYPE html>
-<html>
+<html lang="en-GB">
 <title>Josh's Car Collection</title>
 <link rel="stylesheet" type="text/css" href="styles.css">
 

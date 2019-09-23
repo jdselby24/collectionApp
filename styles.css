@@ -3,17 +3,23 @@ body {
     box-sizing: border-box;
 }
 
-#tableHeader {
-    font-weight: bold;
-}
 
 .tableRow {
-    margin: 10px 0;
+    overflow: auto;
+    border: 1px solid black;
+    width: 100%;
 }
 
 .dataElement {
-    font-size: 7px;
+    font-size: 9px;
     float: left;
-    width: 50px;
+    width: 60px;
     margin-left: 5px;
 }
+
+.tableHeader {
+    font-weight: bold;
+}
+
+
+

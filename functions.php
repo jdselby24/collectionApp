@@ -23,6 +23,12 @@ function getCollection(PDO $db) {
     return $collection;
 }
 
+/**
+ * This function generates the HTML to display the collection visually and generates a table header
+ *
+ * @param array $collection The array of collection data as returned by getCollection function
+ * @return string Returns the HTML to display the collection data in rows and columns
+ */
 function displayCollection(array $collection) {
     $htmlOut = "";
     $htmlOut .= "<h1> Josh's Car Collection</h1>";
@@ -41,14 +47,14 @@ function displayCollection(array $collection) {
     <div class=\"dataElement\">Power (HP)</div>
     <div class=\"dataElement\">Torque (NM)</div>
     <div class=\"dataElement\">Number of Doors</div>
-</div><br>";
+</div>";
 
     foreach ($collection as $car) {
         $htmlOut .= "<div class=\"tableRow\">";
         foreach ($car as $attribute) {
             $htmlOut .= "<div class=\"dataElement\">$attribute</div>";
         }
-        $htmlOut .= "</div><br>";
+        $htmlOut .= "</div>";
     }
 
     return $htmlOut;
