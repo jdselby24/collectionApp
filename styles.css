@@ -1,6 +1,7 @@
 body {
     margin: 0;
     box-sizing: border-box;
+
 }
 
 #tableHeader {
@@ -12,6 +13,7 @@ body {
 }
 
 .dataElement {
+    font-size: 9px;
     display: inline-block;
     float: left;
     margin: 5px;
