@@ -1,0 +1,51 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+#tableHeader {
+    font-weight: bold;
+}
+
+.h1 {
+    margin-left: 10px;
+}
+
+.tableRow {
+    overflow: auto;
+    width: 100%;
+    height: auto;
+    border: 1px solid black;
+}
+
+.dataElement {
+    font-size: 15px;
+    float: left;
+    margin: auto 5px auto 0;
+    padding: 2px;
+}
+
+.tableHeader {
+    font-weight: bold;
+    overflow: auto;
+}
+
+.car {
+    border: 2px solid black;
+    margin: 5px 5px 5px 10px;
+    width: 350px;
+    float: left;
+}
+
+@media screen and (max-width:500px) {
+    .car {
+    width: 250px;
+    margin: 10px 10px;
+    }
+}
+
+
+
