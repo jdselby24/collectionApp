@@ -1,6 +1,6 @@
 <?php
 /**
- * Connects to the database holding the collections and sets fetch mode to FETCH_ASSOC
+ * Creates a database object and sets fetch mode to FETCH_ASSOC
  *
  * @return PDO Returns a PDO database connection object
  */
