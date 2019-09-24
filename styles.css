@@ -6,28 +6,30 @@ body {
 .tableRow {
     overflow: auto;
     width: 100%;
+    height: auto;
     border: 1px solid black;
 }
 
 .dataElement {
     font-size: 15px;
     float: left;
-    width: 100px;
-    margin-left: 5px;
+    width: auto;
+    margin: auto 5px auto 0;
     padding: 2px;
     overflow: auto;
+    text-align: center;
 }
 
 .tableHeader {
     font-weight: bold;
-    border-right: 2px solid black;
     overflow: auto;
 }
 
 .car {
     border: 2px solid black;
-    margin-bottom: 5px;
-    width: 400px;
+    margin: 5px;
+    width: 350px;
+    display: inline-block;
 }
 
 

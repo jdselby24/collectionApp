@@ -17,7 +17,10 @@ function connectDB() {
  * @return array Returns an array of associative arrays holding the collection data
  */
 function getCollection(PDO $db) {
-    $query = $db->prepare("SELECT `type`, `manufacturer`,`model`, `year`, `regNo`, `color`, `fuel`,`engineLayout`, `engineDisplacement`, `driveTrain`, `accel`, `power`, `torque`, `numberOfDoors` FROM `cars`");
+    $SQLStatement = "SELECT `manufacturer`,`model`, `type`, `year`, `regNo`, `color`, 
+    `fuel`,`engineLayout`, `engineDisplacement`, `driveTrain`, `accel`, `power`, `torque`,
+     `numberOfDoors` FROM `cars`";
+    $query = $db->prepare($SQLStatement);
     $query->execute();
     $collection = $query->fetchAll();
     return $collection;
