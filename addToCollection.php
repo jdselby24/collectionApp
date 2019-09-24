@@ -48,30 +48,30 @@
         </div>
         <div class="tableRow">
             <div class="dataElement tableHeader">Engine Displacement (cc):</div>
-            <div class="dataElement"><input name="engineDisplacement" type="text"/></div>
+            <div class="dataElement"><input name="engineDisplacement" type="number" min="0" max="99999"/></div>
         </div>
         <div class="tableRow">
             <div class="dataElement tableHeader">Drivetrain:</div>
             <div class="dataElement">
                 <select name="driveTrain">
-                    <option value = "FWD">FWD</option>
-                    <option value = "RWD">RWD</option>
-                    <option value = "AWD">AWD</option>
-                    <option value = "4WD">4WD</option>
+                    <option value="FWD">FWD</option>
+                    <option value="RWD">RWD</option>
+                    <option value="AWD">AWD</option>
+                    <option value="4WD">4WD</option>
                 </select>
             </div>
         </div>
         <div class="tableRow">
             <div class="dataElement tableHeader">0 to 60MPH time (seconds):</div>
-            <div class="dataElement"><input name="accel" type="text"/></div>
+            <div class="dataElement"><input name="accel" type="number" step="0.1" min="0.1" max="999"/></div>
         </div>
         <div class="tableRow">
             <div class="dataElement tableHeader">Power (HP):</div>
-            <div class="dataElement"><input name="power" type="text"/></div>
+            <div class="dataElement"><input name="power" type="number" min="1" max="9999"/></div>
         </div>
         <div class="tableRow">
             <div class="dataElement tableHeader">Torque (NM):</div>
-            <div class="dataElement"><input name="torque" type="text"/></div>
+            <div class="dataElement"><input name="torque" type="number" min="1" max="9999"/></div>
         </div>
         <div class="tableRow">
             <div class="dataElement tableHeader">Number of Doors:</div>
