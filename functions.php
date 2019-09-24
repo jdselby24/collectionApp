@@ -65,7 +65,7 @@ function displayCollection(array $collection) :string {
     return $htmlOut;
 }
 
-function validateAddData($formData) {
+function validateAddData(array $formData) :array{
     $valid = true;
     $stage = "";
     $strings = ["manufacturer","model","type","regNo","color","fuel","engineLayout"];
