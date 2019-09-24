@@ -53,13 +53,22 @@ function displayCollection(array $collection) :string {
 
     foreach ($collection as $car) {
         $htmlOut .= "<div class=\"car\">";
-        foreach ($car as $key => $attribute) {
-            $htmlOut .= "<div class=\"tableRow\">";
-            $htmlOut .= "<div class=\"dataElement tableHeader\">$rowNames[$key]</div>";
-            $htmlOut .= "<div class=\"dataElement\">". $car[$key] ."</div>";
-            $htmlOut .= "</div>";
+        if (is_array($collection[0]) == true) {
+            if (array_key_exists("type", $car)) {
+                foreach ($car as $key => $attribute) {
+                    $htmlOut .= "<div class=\"tableRow\">";
+                    $htmlOut .= "<div class=\"dataElement tableHeader\">$rowNames[$key]</div>";
+                    $htmlOut .= "<div class=\"dataElement\">" . $car[$key] . "</div>";
+                    $htmlOut .= "</div>";
+                }
+            } else {
+                return 'Error generating HTMl from collection';
+            }
+        } else {
+            return 'Error generating HTMl from collection';
         }
         $htmlOut .= "</div>";
+
     }
     return $htmlOut;
 }

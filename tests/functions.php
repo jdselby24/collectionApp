@@ -17,11 +17,8 @@
         }
 
         public function testFailureDisplayCollection() {
-            $inputTestCollection = [['hello'=>'Yo Waddup',]];
-            $expectedOutput = "<div class=\"car\">";
-            $expectedOutput .= "<div class=\"tableRow\">";
-            $expectedOutput .= "<div class=\"dataElement tableHeader\"></div>";
-            $expectedOutput .= "<div class=\"dataElement\">Yo Waddup</div></div></div>";
+            $inputTestCollection = ['Yo Waddup'];
+            $expectedOutput = 'Error generating HTMl from collection';
 
             $case = displayCollection($inputTestCollection);
             $this->assertEquals($case, $expectedOutput);
