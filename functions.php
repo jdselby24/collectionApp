@@ -4,7 +4,7 @@
  *
  * @return PDO Returns a PDO database connection object
  */
-function connectDB() {
+function connectDB() :PDO {
     $db = new PDO('mysql:host=db; dbname=joshCollection', 'root', 'password');
     $db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
     return $db;
@@ -16,7 +16,7 @@ function connectDB() {
  * @param PDO $db A database PDO object holding a collection
  * @return array Returns an array of associative arrays holding the collection data
  */
-function getCollection(PDO $db) {
+function getCollection(PDO $db) :array {
     $SQLStatement = "SELECT `manufacturer`,`model`, `type`, `year`, `regNo`, `color`, 
     `fuel`,`engineLayout`, `engineDisplacement`, `driveTrain`, `accel`, `power`, `torque`,
      `numberOfDoors` FROM `cars`";
@@ -30,9 +30,9 @@ function getCollection(PDO $db) {
  * This function generates the HTML to display the collection visually and generates headers
  *
  * @param array $collection The array of collection data as returned by getCollection function
- * @return string Returns the HTML to display the collection data in rows and columns
+ * @return string Returns the HTML to display the collection data in rows and columns inside a string
  */
-function displayCollection(array $collection) {
+function displayCollection(array $collection) :string {
     $htmlOut = "";
     $htmlOut .= "<h1> Josh's Car Collection</h1>";
 
