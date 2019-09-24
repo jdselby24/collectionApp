@@ -22,7 +22,6 @@ body {
 
 .dataElement {
     font-size: 15px;
-    font-size: 9px;
     float: left;
     width: auto;
     margin: auto 5px auto 0;
@@ -40,6 +39,13 @@ body {
     margin: 5px 5px 5px 10px;
     width: 350px;
     float: left;
+}
+
+@media screen and (max-width:500px) {
+    .car {
+    width: 250px;
+    margin: 10px 10px;
+}
 }
 
 
