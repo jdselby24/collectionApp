@@ -35,8 +35,6 @@ function getCollection(PDO $db) :array {
  */
 function displayCollection(array $collection) :string {
     $htmlOut = "";
-    $htmlOut .= "<h1> Josh's Car Collection</h1>";
-
     $rowNames = ["type" => "Type:",
         "manufacturer" => "Manufacturer:",
         "model" => "Model:",
