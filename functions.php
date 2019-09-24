@@ -54,21 +54,22 @@ function displayCollection(array $collection) :string
 
     if (is_array($collection[0]) == true) {
         foreach ($collection as $car) {
-            $htmlOut .= "<div class=\"car\">";
 
             if (array_key_exists("type", $car)) {
+                $htmlOut .= "<div class=\"car\">";
                 foreach ($car as $key => $attribute) {
                     $htmlOut .= "<div class=\"tableRow\">";
                     $htmlOut .= "<div class=\"dataElement tableHeader\">$rowNames[$key]</div>";
                     $htmlOut .= "<div class=\"dataElement\">" . $car[$key] . "</div>";
                     $htmlOut .= "</div>";
                 }
+                $htmlOut .= "</div>";
             } else {
                 return 'Error generating HTML from collection';
             }
 
         }
-        $htmlOut .= "</div>";
+
 
     } else {
         return 'Error generating HTML from collection';
