@@ -51,6 +51,7 @@ function displayCollection(array $collection) :string
         "power" => "Power (HP):",
         "torque" => "Torque (NM):",
         "numberOfDoors" => "Number of Doors:"];
+
     if (is_array($collection[0]) == true) {
         foreach ($collection as $car) {
             $htmlOut .= "<div class=\"car\">";
