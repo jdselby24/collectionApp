@@ -13,7 +13,7 @@
 
 <div class="newCar">
     <h3>Add Car:</h3>
-    <form method="post">
+    <form method="post" target="addToDB.php">
         <div class="tableRow">
             <div class="dataElement tableHeader">Manufacturer:</div>
             <div class="dataElement"><input name="manufacturer" type="text"/></div>
@@ -76,6 +76,9 @@
         <div class="tableRow">
             <div class="dataElement tableHeader">Number of Doors:</div>
             <div class="dataElement"><input type="number" name="numberOfDoors" min="1" max="99"/></div>
+        </div>
+        <div class="tableRow">
+            <div class="dataElement"><input type="submit"/></div>
         </div>
 </div>
 
