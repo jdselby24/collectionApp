@@ -64,7 +64,3 @@ function displayCollection(array $collection) :string {
 
     return $htmlOut;
 }
-
-
-
-
