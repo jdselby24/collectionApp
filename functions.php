@@ -46,7 +46,7 @@ function displayCollection(array $collection) {
         "engineLayout" => "Engine Layout:",
         "engineDisplacement" => "Engine Displacement (cc):",
         "driveTrain" => "Drivetrain:",
-        "accel" => "0 to 60 time (seconds):",
+        "accel" => "0 to 60MPH time (seconds):",
         "power" => "Power (HP):",
         "torque" => "Torque (NM):",
         "numberOfDoors" => "Number of Doors:"];
