@@ -34,7 +34,8 @@ function getCollection(PDO $db) :array {
  *
  * @return string Returns the HTML to display the collection data in rows and columns inside a string
  */
-function displayCollection(array $collection) :string {
+function displayCollection(array $collection) :string
+{
     $htmlOut = "";
     $rowNames = ["type" => "Type:",
         "manufacturer" => "Manufacturer:",
@@ -50,10 +51,10 @@ function displayCollection(array $collection) :string {
         "power" => "Power (HP):",
         "torque" => "Torque (NM):",
         "numberOfDoors" => "Number of Doors:"];
+    if (is_array($collection[0]) == true) {
+        foreach ($collection as $car) {
+            $htmlOut .= "<div class=\"car\">";
 
-    foreach ($collection as $car) {
-        $htmlOut .= "<div class=\"car\">";
-        if (is_array($collection[0]) == true) {
             if (array_key_exists("type", $car)) {
                 foreach ($car as $key => $attribute) {
                     $htmlOut .= "<div class=\"tableRow\">";
@@ -64,11 +65,14 @@ function displayCollection(array $collection) :string {
             } else {
                 return 'Error generating HTML from collection';
             }
-        } else {
-            return 'Error generating HTML from collection';
+
         }
         $htmlOut .= "</div>";
 
+    } else {
+        return 'Error generating HTML from collection';
     }
+
+
     return $htmlOut;
 }
