@@ -73,7 +73,7 @@ function validateAddData(array $formData) :array{
     foreach ($formData as $key => $data) {
         if ($valid !== false) {
             if (in_array($key, $strings)) {
-                if ((is_string($data)) && (strlen($data) < 256)) {
+                if ((is_string((string)$data)) && (strlen($data) < 256)) {
                     $valid = true;
                 } else {
                     $valid = false;
@@ -94,7 +94,7 @@ function validateAddData(array $formData) :array{
                     $stage = $key;
                 }
             } elseif ($key == "driveTrain") {
-                if ((is_string($data)) && ($data === "FWD" || $data === "RWD" ||$data === "AWD" || $data === "4WD")) {
+                if ((is_string((string)$data)) && ($data === "FWD" || $data === "RWD" ||$data === "AWD" || $data === "4WD")) {
                     $valid = true;
                 } else {
                     $valid = false;
