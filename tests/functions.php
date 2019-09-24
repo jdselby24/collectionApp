@@ -18,7 +18,7 @@
 
         public function testFailureDisplayCollection() {
             $inputTestCollection = ['Yo Waddup'];
-            $expectedOutput = 'Error generating HTMl from collection';
+            $expectedOutput = 'Error generating HTML from collection';
 
             $case = displayCollection($inputTestCollection);
             $this->assertEquals($case, $expectedOutput);

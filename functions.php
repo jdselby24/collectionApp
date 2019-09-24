@@ -62,10 +62,10 @@ function displayCollection(array $collection) :string {
                     $htmlOut .= "</div>";
                 }
             } else {
-                return 'Error generating HTMl from collection';
+                return 'Error generating HTML from collection';
             }
         } else {
-            return 'Error generating HTMl from collection';
+            return 'Error generating HTML from collection';
         }
         $htmlOut .= "</div>";
 
