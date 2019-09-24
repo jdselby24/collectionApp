@@ -34,7 +34,8 @@ function getCollection(PDO $db) :array {
  *
  * @return string Returns the HTML to display the collection data in rows and columns inside a string
  */
-function displayCollection(array $collection) :string {
+function displayCollection(array $collection) :string
+{
     $htmlOut = "";
     $rowNames = ["type" => "Type:",
         "manufacturer" => "Manufacturer:",
@@ -51,15 +52,29 @@ function displayCollection(array $collection) :string {
         "torque" => "Torque (NM):",
         "numberOfDoors" => "Number of Doors:"];
 
-    foreach ($collection as $car) {
-        $htmlOut .= "<div class=\"car\">";
-        foreach ($car as $key => $attribute) {
-            $htmlOut .= "<div class=\"tableRow\">";
-            $htmlOut .= "<div class=\"dataElement tableHeader\">$rowNames[$key]</div>";
-            $htmlOut .= "<div class=\"dataElement\">". $car[$key] ."</div>";
-            $htmlOut .= "</div>";
+    if (is_array($collection[0]) == true) {
+        foreach ($collection as $car) {
+
+            if (array_key_exists("type", $car)) {
+                $htmlOut .= "<div class=\"car\">";
+                foreach ($car as $key => $attribute) {
+                    $htmlOut .= "<div class=\"tableRow\">";
+                    $htmlOut .= "<div class=\"dataElement tableHeader\">$rowNames[$key]</div>";
+                    $htmlOut .= "<div class=\"dataElement\">" . $car[$key] . "</div>";
+                    $htmlOut .= "</div>";
+                }
+                $htmlOut .= "</div>";
+            } else {
+                return 'Error generating HTML from collection';
+            }
+
         }
-        $htmlOut .= "</div>";
+
+
+    } else {
+        return 'Error generating HTML from collection';
     }
+
+
     return $htmlOut;
 }
