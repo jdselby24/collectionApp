@@ -30,6 +30,7 @@ function getCollection(PDO $db) :array {
  * This function generates the HTML to display the collection visually and generates headers
  *
  * @param array $collection The array of collection data
+ *
  * @return string Returns the HTML to display the collection data in rows and columns inside a string
  */
 function displayCollection(array $collection) :string {
@@ -61,6 +62,5 @@ function displayCollection(array $collection) :string {
         }
         $htmlOut .= "</div>";
     }
-
     return $htmlOut;
 }

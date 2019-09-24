@@ -1,8 +1,9 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
-    box-sizing: border-box;
-    overflow: auto;
-
 }
 
 #tableHeader {
@@ -23,10 +24,8 @@ body {
 .dataElement {
     font-size: 15px;
     float: left;
-    width: auto;
     margin: auto 5px auto 0;
     padding: 2px;
-    text-align: center;
 }
 
 .tableHeader {
@@ -45,7 +44,7 @@ body {
     .car {
     width: 250px;
     margin: 10px 10px;
-}
+    }
 }
 
 
