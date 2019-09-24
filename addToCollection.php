@@ -11,9 +11,13 @@
 
 <h1> Josh's Car Collection</h1>
 
+<?php
+
+?>
+
 <div class="newCar">
     <h3>Add Car:</h3>
-    <form method="post" target="addToDB.php">
+    <form method="post" action="addCar.php">
         <div class="tableRow">
             <div class="dataElement tableHeader">Manufacturer:</div>
             <div class="dataElement"><input name="manufacturer" type="text"/></div>
