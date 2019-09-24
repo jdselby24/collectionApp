@@ -9,7 +9,9 @@
 </head>
 
 <body>
+    <a href="addToCollection.php">Add Car</a>
     <h1> Josh's Car Collection</h1>
+
     <?php
     require_once('functions.php');
 
