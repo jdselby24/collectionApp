@@ -13,7 +13,7 @@ function connectDB() :PDO {
 /**
  * Returns an array of associative arrays holding the collection data from the DB specified
  *
- * @param PDO $db A database PDO object holding a collection
+ * @param PDO $db A database PDO object
  * @return array Returns an array of associative arrays holding the collection data
  */
 function getCollection(PDO $db) :array {
