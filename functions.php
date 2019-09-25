@@ -5,8 +5,7 @@
  *
  * @return PDO Returns a PDO database connection object
  */
-function connectDB(): PDO
-{
+function connectDB() :PDO {
     $db = new PDO('mysql:host=db; dbname=joshCollection', 'root', 'password');
     $db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
     return $db;
@@ -82,7 +81,6 @@ function validateAddData(array $formData): array
     $stage = "";
     $strings = ["manufacturer", "model", "type", "regNo", "color", "fuel", "engineLayout"];
     $integers = ["engineDisplacement", "power", "torque", "numberOfDoors"];
-//    var_dump($formData);
     foreach ($formData as $formItem) {
         if ($valid === true) {
             if(strlen($formItem) !== 0) {
@@ -137,8 +135,7 @@ function validateAddData(array $formData): array
     }
 
 
-    $formValidity = [$valid, $stage];
-    return $formValidity;
+    return ["valid" => $valid, "failedAt" => $stage];
 }
 
 /**
@@ -192,14 +189,8 @@ function addToDB(array $formData, PDO $db): string
      `numberOfDoors`) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
 
     $query = $db->prepare($statement);
-    $query->execute([$formData['manufacturer'], $formData['model'], $formData['type'], $formData['year'],
-        $formData['regNo'], $formData['color'], $formData['fuel'], $formData['engineLayout'],
-        $formData['engineDisplacement'], $formData['driveTrain'], $formData['accel'], $formData['power'],
-        $formData['torque'], $formData['numberOfDoors']]);
+    $state = $query->execute([$formData['manufacturer'], $formData['model'], $formData['type'], $formData['year'], $formData['regNo'], $formData['color'], $formData['fuel'], $formData['engineLayout'], $formData['engineDisplacement'], $formData['driveTrain'], $formData['accel'], $formData['power'], $formData['torque'], $formData['numberOfDoors']]);
 
-    return 'Car sucessfully added to collection!';
+    return $state;
 }
-
-
-
 ?>

@@ -6,7 +6,7 @@ class StackTest extends TestCase {
     // Tests for the validateAddData function
     public function testSuccessValidateAddData()
     {
-        $expected = [true,""];
+        $expected = ["valid" => true, "failedAt" => ""];
         $input = ["model"=>"CarModel"];
         $case = validateAddData($input);
         $this->assertEquals($case,$expected);
@@ -15,7 +15,7 @@ class StackTest extends TestCase {
 
     public function testFailureValidateAddData()
     {
-        $expected = [true,""];
+        $expected = [false,"Form is incomplete!"];
         $input = ["mode" => false];
         $case = validateAddData($input);
         $this->assertEquals($case,$expected);
