@@ -25,15 +25,15 @@ if(isset($_SESSION["formError"])) {
     <form method="post" action="addCar.php">
         <div class="tableRow">
             <div class="dataElement tableHeader">Manufacturer:</div>
-            <div class="dataElement"><input name="manufacturer" type="text" maxlength="254" placeholder="e.g. Volkswagen" required/></div>
+            <div class="dataElement"><input name="manufacturer" type="text" maxlength="255" placeholder="e.g. Volkswagen" required/></div>
         </div>
         <div class="tableRow">
             <div class="dataElement tableHeader">Model:</div>
-            <div class="dataElement"><input name="model" type="text" maxlength="254" placeholder="e.g. Golf Mk4" required/></div>
+            <div class="dataElement"><input name="model" type="text" maxlength="255" placeholder="e.g. Golf Mk4" required/></div>
         </div>
         <div class="tableRow">
             <div class="dataElement tableHeader">Type:</div>
-            <div class="dataElement"><input name="type" type="text" maxlength="254" placeholder="e.g. Hatchback" required/></div>
+            <div class="dataElement"><input name="type" type="text" maxlength="255" placeholder="e.g. Hatchback" required/></div>
         </div>
         <div class="tableRow">
             <div class="dataElement tableHeader">Year:</div>
@@ -45,11 +45,11 @@ if(isset($_SESSION["formError"])) {
         </div>
         <div class="tableRow">
             <div class="dataElement tableHeader">Colour:</div>
-            <div class="dataElement"><input name="color" type="text" maxlength="254" placeholder="e.g. Blue" required/></div>
+            <div class="dataElement"><input name="color" type="text" maxlength="255" placeholder="e.g. Blue" required/></div>
         </div>
         <div class="tableRow">
             <div class="dataElement tableHeader">Fuel:</div>
-            <div class="dataElement"><input name="fuel" type="text" maxlength="126" placeholder="e.g. Petrol" required/></div>
+            <div class="dataElement"><input name="fuel" type="text" maxlength="127" placeholder="e.g. Petrol" required/></div>
         </div>
         <div class="tableRow">
             <div class="dataElement tableHeader">Engine Layout:</div>
