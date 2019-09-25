@@ -13,5 +13,5 @@ if ($valid[0] === true) {
     $formError = formError($valid);
     $_SESSION["formError"] = $formError;
     header("addToCollection.php");
+}
 ?>
-

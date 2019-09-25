@@ -25,39 +25,39 @@ if(isset($_SESSION["formError"])) {
     <form method="post" action="addCar.php">
         <div class="tableRow">
             <div class="dataElement tableHeader">Manufacturer:</div>
-            <div class="dataElement"><input name="manufacturer" type="text" placeholder="e.g. Volkswagen" required/></div>
+            <div class="dataElement"><input name="manufacturer" type="text" maxlength="254" placeholder="e.g. Volkswagen" required/></div>
         </div>
         <div class="tableRow">
             <div class="dataElement tableHeader">Model:</div>
-            <div class="dataElement"><input name="model" type="text" placeholder="e.g. Golf Mk4" required/></div>
+            <div class="dataElement"><input name="model" type="text" maxlength="254" placeholder="e.g. Golf Mk4" required/></div>
         </div>
         <div class="tableRow">
             <div class="dataElement tableHeader">Type:</div>
-            <div class="dataElement"><input name="type" type="text" placeholder="e.g. Hatchback" required/></div>
+            <div class="dataElement"><input name="type" type="text" maxlength="254" placeholder="e.g. Hatchback" required/></div>
         </div>
         <div class="tableRow">
             <div class="dataElement tableHeader">Year:</div>
-            <div class="dataElement"><input type="number" name="year" min="0" max="9999" required/></div>
+            <div class="dataElement"><input type="number" name="year" maxlength="4" min="0" max="9999" required/></div>
         </div>
         <div class="tableRow">
             <div class="dataElement tableHeader">Registration:</div>
-            <div class="dataElement"><input name="regNo" type="text" placeholder="e.g. AA54 BCD" required/></div>
+            <div class="dataElement"><input name="regNo" type="text" maxlength="16" placeholder="e.g. AA54 BCD" required/></div>
         </div>
         <div class="tableRow">
             <div class="dataElement tableHeader">Colour:</div>
-            <div class="dataElement"><input name="color" type="text" placeholder="e.g. Blue" required/></div>
+            <div class="dataElement"><input name="color" type="text" maxlength="254" placeholder="e.g. Blue" required/></div>
         </div>
         <div class="tableRow">
             <div class="dataElement tableHeader">Fuel:</div>
-            <div class="dataElement"><input name="fuel" type="text" placeholder="e.g. Petrol" required/></div>
+            <div class="dataElement"><input name="fuel" type="text" maxlength="126" placeholder="e.g. Petrol" required/></div>
         </div>
         <div class="tableRow">
             <div class="dataElement tableHeader">Engine Layout:</div>
-            <div class="dataElement"><input name="engineLayout" type="text" placeholder="e.g. V8" required/></div>
+            <div class="dataElement"><input name="engineLayout" type="text" maxlength="4" placeholder="e.g. V8" required/></div>
         </div>
         <div class="tableRow">
             <div class="dataElement tableHeader">Engine Displacement (cc):</div>
-            <div class="dataElement"><input name="engineDisplacement" type="number" min="0" max="99999" required/></div>
+            <div class="dataElement"><input name="engineDisplacement" maxlength="5" type="number" min="0" max="99999" required/></div>
         </div>
         <div class="tableRow">
             <div class="dataElement tableHeader">Drivetrain:</div>
@@ -76,15 +76,15 @@ if(isset($_SESSION["formError"])) {
         </div>
         <div class="tableRow">
             <div class="dataElement tableHeader">Power (HP):</div>
-            <div class="dataElement"><input name="power" type="number" min="1" max="9999" required/></div>
+            <div class="dataElement"><input name="power" type="number" maxlength="16" min="1" max="9999" required/></div>
         </div>
         <div class="tableRow">
             <div class="dataElement tableHeader">Torque (NM):</div>
-            <div class="dataElement"><input name="torque" type="number" min="1" max="9999" required/></div>
+            <div class="dataElement"><input name="torque" type="number" maxlength="16" min="1" max="9999" required/></div>
         </div>
         <div class="tableRow">
             <div class="dataElement tableHeader">Number of Doors:</div>
-            <div class="dataElement"><input type="number" name="numberOfDoors" min="1" max="99" required/></div>
+            <div class="dataElement"><input type="number" name="numberOfDoors" maxlength="16" min="1" max="99" required/></div>
         </div>
         <div class="tableRow">
             <div class="dataElement"><input type="submit"/></div>
