@@ -1,3 +1,13 @@
+<?php
+session_start();
+require_once('functions.php');
+
+$db = connectDB();
+$collection = getCollection($db);
+
+$htmlCollection = displayCollection($collection);
+?>
+
 <!DOCTYPE html>
 <html lang="en-GB">
 
@@ -9,16 +19,9 @@
 </head>
 
 <body>
-    <a href="addToCollection.php">Add Car</a>
     <h1> Josh's Car Collection</h1>
-
+    <h3><a href="addToCollection.php">Add to Collection</a></h3>
     <?php
-    require_once('functions.php');
-
-    $db = connectDB();
-    $collection = getCollection($db);
-
-    $htmlCollection = displayCollection($collection);
     echo $htmlCollection;
     ?>
 </body>
