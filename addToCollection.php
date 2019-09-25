@@ -20,15 +20,15 @@
     <form method="post" action="addCar.php">
         <div class="tableRow">
             <div class="dataElement tableHeader">Manufacturer:</div>
-            <div class="dataElement"><input name="manufacturer" type="text"/></div>
+            <div class="dataElement"><input name="manufacturer" type="text" placeholder="e.g. Volkswagen" required/></div>
         </div>
         <div class="tableRow">
             <div class="dataElement tableHeader">Model:</div>
-            <div class="dataElement"><input name="model" type="text"/></div>
+            <div class="dataElement"><input name="model" type="text" placeholder="e.g. Golf Mk4" required/></div>
         </div>
         <div class="tableRow">
             <div class="dataElement tableHeader">Type:</div>
-            <div class="dataElement"><input name="type" type="text"/></div>
+            <div class="dataElement"><input name="type" type="text" placeholder="e.g. Hatchback" required/></div>
         </div>
         <div class="tableRow">
             <div class="dataElement tableHeader">Year:</div>
@@ -36,19 +36,19 @@
         </div>
         <div class="tableRow">
             <div class="dataElement tableHeader">Registration:</div>
-            <div class="dataElement"><input name="regNo" type="text"/></div>
+            <div class="dataElement"><input name="regNo" type="text" placeholder="e.g. AA54 BCD" required/></div>
         </div>
         <div class="tableRow">
             <div class="dataElement tableHeader">Colour:</div>
-            <div class="dataElement"><input name="color" type="text"/></div>
+            <div class="dataElement"><input name="color" type="text" placeholder="e.g. Blue" required/></div>
         </div>
         <div class="tableRow">
             <div class="dataElement tableHeader">Fuel:</div>
-            <div class="dataElement"><input name="petrol" type="text"/></div>
+            <div class="dataElement"><input name="fuel" type="text" placeholder="e.g. Petrol" required/></div>
         </div>
         <div class="tableRow">
             <div class="dataElement tableHeader">Engine Layout:</div>
-            <div class="dataElement"><input name="engineLayout" type="text"/></div>
+            <div class="dataElement"><input name="engineLayout" type="text" placeholder="e.g. V8" required/></div>
         </div>
         <div class="tableRow">
             <div class="dataElement tableHeader">Engine Displacement (cc):</div>

@@ -8,5 +8,8 @@ $valid = validateAddData($formData);
 if ($valid[0] === true) {
     echo "The form was valid";
 } else {
-    echo "The form was invalid";
+    $formError = formError($valid);
+    $_SESSION["formError"] = $formError;
+    header("addToCollection.php");
 }
+
