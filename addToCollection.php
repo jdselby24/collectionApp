@@ -12,6 +12,13 @@
 <h1> Josh's Car Collection</h1>
 
 <?php
+    require_once('functions.php');
+    session_start();
+
+    if(isset($_SESSION["formError"])) {
+        echo "<h2>" . $_SESSION["formError"] . "</h2>";
+        session_destroy();
+    }
 
 ?>
 

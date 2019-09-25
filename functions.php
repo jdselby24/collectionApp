@@ -151,7 +151,12 @@ function formError(array $formValidity): string
         "torque" => "Torque (NM)",
         "numberOfDoors" => "Number of Doors"];
 
-    $errorMsg = "Data in '" . $rowNames[$formValidity[1]] . "' is invalid or is of the wrong type";
+    if(key_exists($formValidity[1], $rowNames)) {
+        $errorMsg = "Data in '" . $rowNames[$formValidity[1]] . "' is invalid or is of the wrong type";
+    } else {
+        $errorMsg = "Data in '" . $formValidity[1] . "' is invalid or is of the wrong type";
+    }
+
     return $errorMsg;
 
 }
