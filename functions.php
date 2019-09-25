@@ -110,6 +110,21 @@ function validateAddData(array $formData) :array{
             }
         }
     }
+    $formValidity = [$valid,$stage];
+    return $formValidity;
+}
 
-    return [$valid,$stage];
+function formError(array $formValidity) :string {}
+
+function addToDB(array $formData,PDO $db) {
+    $statement = "INSERT INTO `cars` (`manufacturer`,`model`, `type`, `year`, `regNo`, `color`, 
+    `fuel`,`engineLayout`, `engineDisplacement`, `driveTrain`, `accel`, `power`, `torque`,
+     `numberOfDoors`) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+
+    $query = $db->prepare($statement);
+
+    $query->execute([$formData['manufacturer'],$formData['model'], $formData['type'], $formData['year'],
+        $formData['regNo'], $formData['color'], $formData['fuel'],$formData['engineLayout'] ,
+        $formData['engineDisplacement'], $formData['driveTrain'], $formData['accel'], $formData['power'],
+        $formData['torque'], $formData['numberOfDoors']]);
 }
