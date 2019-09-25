@@ -6,7 +6,9 @@ $db = connectDB();
 $valid = validateAddData($formData);
 
 if ($valid[0] === true) {
-    addToDB($formData,$db);
+    $addState = addToDB($formData,$db);
+    echo "<h1>" . $addState . "</h1>";
 } else {
-    echo "The form was invalid";
+    $formError = formError($valid);
 }
+?>

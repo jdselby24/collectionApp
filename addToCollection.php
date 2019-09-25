@@ -44,7 +44,7 @@
         </div>
         <div class="tableRow">
             <div class="dataElement tableHeader">Fuel:</div>
-            <div class="dataElement"><input name="petrol" type="text"/></div>
+            <div class="dataElement"><input name="fuel" type="text"/></div>
         </div>
         <div class="tableRow">
             <div class="dataElement tableHeader">Engine Layout:</div>
