@@ -2,31 +2,27 @@
 session_start();
 require_once('functions.php');
 
-if(isset($_GET['authenticated'])) {
-    if($_GET['authenticated'] === 'true') {
-        $formData = $_POST;
-        $db = connectDB();
-        $valid = validateAddData($formData);
+if(!isset($_GET['authenticated'])) {
+    header('Location: addToCollection.php');
+}
 
 
-        if ($valid["valid"] === true) {
-            $addState = addToDB($formData,$db);
-            if ($addState) {
-                header('Location: index.php');
-            } else {
-                header('Location: addToCollection.php');
-            }
+$formData = $_POST;
+$db = connectDB();
+$valid = validateAddData($formData);
 
-        } else {
-            $formError = formError($valid);
-            $_SESSION["formError"] = $formError;
-            unset($_POST);
-            header("Location: addToCollection.php");
-        }
+if ($valid["valid"] === true) {
+    $addState = addToDB($formData,$db);
+    if ($addState) {
+        header('Location: index.php');
     } else {
         header('Location: addToCollection.php');
     }
+
 } else {
-    header('Location: addToCollection.php');
+    $formError = formError($valid);
+    $_SESSION["formError"] = $formError;
+    unset($_POST);
+    header("Location: addToCollection.php");
 }
 ?>
