@@ -186,10 +186,23 @@ function addToDB(array $formData, PDO $db): string
 {
     $statement = "INSERT INTO `cars` (`manufacturer`,`model`, `type`, `year`, `regNo`, `color`, 
     `fuel`,`engineLayout`, `engineDisplacement`, `driveTrain`, `accel`, `power`, `torque`,
-     `numberOfDoors`) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+     `numberOfDoors`) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?);";
 
     $query = $db->prepare($statement);
-    $state = $query->execute([$formData['manufacturer'], $formData['model'], $formData['type'], $formData['year'], $formData['regNo'], $formData['color'], $formData['fuel'], $formData['engineLayout'], $formData['engineDisplacement'], $formData['driveTrain'], $formData['accel'], $formData['power'], $formData['torque'], $formData['numberOfDoors']]);
+    $state = $query->execute([filter_var($formData['manufacturer'], FILTER_SANITIZE_STRING),
+    filter_var($formData['model'], FILTER_SANITIZE_STRING),
+    filter_var($formData['type'], FILTER_SANITIZE_STRING),
+    filter_var($formData['year'], FILTER_SANITIZE_STRING),
+    filter_var($formData['regNo'], FILTER_SANITIZE_STRING),
+    filter_var($formData['color'], FILTER_SANITIZE_STRING),
+    filter_var($formData['fuel'], FILTER_SANITIZE_STRING),
+    filter_var($formData['engineLayout'], FILTER_SANITIZE_STRING),
+    filter_var($formData['engineDisplacement'], FILTER_SANITIZE_STRING),
+    filter_var($formData['driveTrain'], FILTER_SANITIZE_STRING),
+    filter_var($formData['accel'], FILTER_SANITIZE_STRING),
+    filter_var($formData['power'], FILTER_SANITIZE_STRING),
+    filter_var($formData['torque'], FILTER_SANITIZE_STRING),
+    filter_var($formData['numberOfDoors'], FILTER_SANITIZE_STRING)]);
 
     return $state;
 }

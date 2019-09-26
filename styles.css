@@ -14,10 +14,9 @@ body {
     margin-left: 10px;
 }
 
-.tableRow {
+.car .tableRow {
     overflow: auto;
     width: 100%;
-    height: auto;
     border: 1px solid black;
 }
 
@@ -25,7 +24,7 @@ body {
     font-size: 15px;
     float: left;
     margin: auto 5px auto 0;
-    padding: 2px;
+    padding: 6px;
 }
 
 .tableHeader {
@@ -36,7 +35,7 @@ body {
 .car {
     border: 2px solid black;
     margin: 5px 5px 5px 10px;
-    width: 350px;
+    width: auto;
     float: left;
 }
 
