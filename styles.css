@@ -40,6 +40,30 @@ body {
     float: left;
 }
 
+.newCar {
+    border: 2px solid black;
+    margin: 20px;
+    width: 350px;
+    float: left;
+    text-align: center;
+}
+
+.newCar .dataElement {
+    width: 100%;
+    font-size: 15px;
+    float: left;
+    margin: auto 5px auto 0;
+    padding: 2px;
+}
+
+input {
+    margin-bottom: 5px;
+}
+
+select {
+    margin-bottom: 5px;
+}
+
 @media screen and (max-width:500px) {
     .car {
     width: 250px;
