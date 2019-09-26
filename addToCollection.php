@@ -23,7 +23,7 @@ if(isset($_SESSION["formError"])) {
 
 <div class="newCar">
     <h3>Add Car:</h3>
-    <form method="post" action="addCar.php">
+    <form method="post" action="addCar.php?authenticated=true">
         <div class="tableRow">
             <div class="dataElement tableHeader">Manufacturer:</div>
             <div class="dataElement"><input name="manufacturer" type="text" maxlength="255" placeholder="e.g. Volkswagen" required/></div>
