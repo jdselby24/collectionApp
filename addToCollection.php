@@ -87,9 +87,6 @@ if(isset($_SESSION["formError"])) {
             <div class="dataElement tableHeader">Number of Doors:</div>
             <div class="dataElement"><input type="number" name="numberOfDoors" maxlength="16" min="1" max="99" required/></div>
         </div>
-        <div class="tableRow" id="hidden">
-            <div class="dataElement"><input type="text" name="formSubmitted" value="true"/></div>
-        </div>
 
         <div class="tableRow">
             <div class="dataElement"><input type="submit"/></div>
